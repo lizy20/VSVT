@@ -1,10 +1,10 @@
 % % % MIT License
 % % % Copyright (c) 2025 [Zeyang Li,M2O group, School of engineering, Cardiff University]
 
-### In order to reduce code redundancy,  some functionality has been removed or annotated with interface.  
-###  Interested readers can debug the codes by themselves according to the requirment，
+% In order to reduce code redundancy,  some functionality has been removed or annotated with interface.  
+% Interested readers can debug the codes by themselves according to the requirment，
          refer to the paperwork{https://doi.org/10.1016/j.cma.2024.117378}.
-###  For the sake of computation efficiency on normal desktop, we certainly 
+% For the sake of computation efficiency on normal desktop, we certainly 
         adjust serval parameters in the codes, with decreasing  volume//copmliance accuracy in 
         de-homogenzation process.  Please refer to the comment in codes for reference.
 
@@ -20,7 +20,10 @@ A MATLAB App Designer-based graphical interface for Structural optimization.
 -  MATLAB R2023b or newer
 -  attached open-access  ‘Poisson disc sampling’， ‘SlanCM colormap’.
 
-## 🚀 Getting Started
+-  
+
+## 🚀 Getting Started 
+
    1.run 'run_main_app.mlapp'('run_main_app.m') file for an interactive GUI with App Designer.
    
    2.Given the info of the typical rectangle design domain and constraint
@@ -52,10 +55,11 @@ A MATLAB App Designer-based graphical interface for Structural optimization.
         R_{min} ≈ 1.15*mesh element length, is usually reasonable.
 	
   7.  For sake of converience, we provide an {Aniso-iso switch} to respectively achieve anisotropic//isotropic Voronoi porous structure optmization. 
-							
-============================================= 【🚀 Advanced using】============================================================================
-===============================================================================================================================================
-##  A series of tuning interface is provided for experienced user in practical application.
+
+
+       
+## 🚀 Advanced using
+ A series of tuning interface is provided for experienced user in practical application.
     For read-friendly， the basic mesh assignment framework is refer to "An efficient 3D topology optimization code written in Matlab" (Liu K,2013)
 
 
@@ -105,9 +109,6 @@ A MATLAB App Designer-based graphical interface for Structural optimization.
 	For the sake of convenience, each workflowXX.m will automatically read the former result geoXX.mat and save the processed result as geoXX+1.m//
 	So, after the one complete workflow, ones can only adjust single .m file and individually run it for the desired effect, by using  GUI- {All steps} selection panel.
 	This may be useful for testing different boudanry thickness and  simplification. 
-	
-========================================================================================================================================================
-========================================================================================================================================================
 
 
    
