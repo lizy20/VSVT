@@ -1,12 +1,13 @@
+
 % % % MIT License
 % % % Copyright (c) 2025 [Zeyang Li,M2O group, School of engineering, Cardiff University]
 
 % In order to reduce code redundancy,  some functionality has been removed or annotated with interface.  
-% Interested readers can debug the codes by themselves according to the requirment，
+% Interested readers can debug the codes by themselves according to the requirement，
          refer to the paperwork{https://doi.org/10.1016/j.cma.2024.117378}.
 % For the sake of computation efficiency on normal desktop, we certainly 
-        adjust serval parameters in the codes, with decreasing  volume//copmliance accuracy in 
-        de-homogenzation process.  Please refer to the comment in codes for reference.
+        adjust serval parameters in the codes, with decreasing  volume//compliance accuracy in 
+        de-homogenization process.  Please refer to the comment in codes for reference.
 
 Any other questions about the codes， please contact author:   www.m2olab.uk// 4692420536@qq.com
 
@@ -34,8 +35,8 @@ A MATLAB App Designer-based graphical interface for Structural optimization.
 
 	  Typically, for Uni-direction compression case, we used extra element direction constraint, alpha = 89~90°，to achieve
                  results in paper {https://doi.org/10.1016/j.cma.2024.117378}, marked as case-4 compress(paper)
-	   A normal optimization considering {alpah =-90 ~ 90}, please comments out the codes {Row 152~154 in /multito/continous}. However, the performance
-	    of the final result may suggest certain decrease, due to the influence by local optimal during the MMA optmization process.
+	   A normal optimization considering {alpha =-90 ~ 90}, please comments out the codes {Row 152~154 in /multito/continous}. However, the performance
+	    of the final result may suggest certain decrease, due to the influence by local optimal during the MMA optimization process.
 
 
 	- Model overview can be check in the Figure 10. Each green nodal force marker correspond 
