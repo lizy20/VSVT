@@ -1,0 +1,500 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    0.0, 0.0), point1=(15.0, 0.0))
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(-30.0, 20.0), 
+    point2=(25.0, -20.0))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], ))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (-18.75, 2.5), axisPoint2=(-5.0, 11.25), center=(-10.0, -2.5))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (15.0, 8.75), axisPoint2=(17.5, 7.5), center=(15.0, 12.5))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (13.75, -6.25), axisPoint2=(16.25, -3.75), center=(16.25, -11.25))
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].parts['Part-1'].regenerate()
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], ))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (-18.75, 1.25), axisPoint2=(-15.0, 7.5), center=(-20.0, 6.25))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (-12.5, -8.75), axisPoint2=(-6.25, -7.5), center=(-17.5, -12.5))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (5.0, -5.0), axisPoint2=(10.0, 1.25), center=(0.0, 3.75))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (17.5, -3.75), axisPoint2=(20.0, -1.25), center=(17.5, 5.0))
+mdb.models['Model-1'].sketches['__edit__'].EllipseByCenterPerimeter(axisPoint1=
+    (15.0, -10.0), axisPoint2=(6.95770278967917, -3.13536220010503), center=(
+    7.5, -11.25))
+mdb.models['Model-1'].sketches['__edit__'].undo()
+mdb.models['Model-1'].sketches['__edit__'].rectangle(point1=(6.25, -10.0), 
+    point2=(18.75, -16.25))
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], ))
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].parts['Part-1'].regenerate()
+mdb.models['Model-1'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-1'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-1'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-1'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-1'].sketches['__edit__'].geometry[2], ))
+del mdb.models['Model-1'].sketches['__edit__']
+mdb.models['Model-1'].parts['Part-1'].regenerate()
+del mdb.models['Model-1'].parts['Part-1'].features['Shell planar-1']
+del mdb.models['Model-1'].parts['Part-1']
+mdb.models['Model-1'].ConstrainedSketch(name='__profile__', sheetSize=200.0)
+mdb.models['Model-1'].sketches['__profile__'].rectangle(point1=(0.0, 0.0), 
+    point2=(45.0, 30.0))
+mdb.models['Model-1'].sketches['__profile__'].EllipseByCenterPerimeter(
+    axisPoint1=(7.5, 13.75), axisPoint2=(10.0, 17.5), center=(7.5, 8.75))
+mdb.models['Model-1'].sketches['__profile__'].EllipseByCenterPerimeter(
+    axisPoint1=(25.0, 20.0), axisPoint2=(25.0, 23.75), center=(18.75, 23.75))
+mdb.models['Model-1'].sketches['__profile__'].EllipseByCenterPerimeter(
+    axisPoint1=(26.25, 12.5), axisPoint2=(25.0, 8.75), center=(20.0, 11.25))
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    33.75, 16.25), point1=(37.5, 13.75))
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    31.25, 5.0), point1=(33.75, 3.75))
+mdb.models['Model-1'].sketches['__profile__'].CircleByCenterPerimeter(center=(
+    7.5, 21.25), point1=(8.75, 18.75))
+mdb.models['Model-1'].Part(dimensionality=TWO_D_PLANAR, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].BaseShell(sketch=
+    mdb.models['Model-1'].sketches['__profile__'])
+del mdb.models['Model-1'].sketches['__profile__']
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=5.0)
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=1.0)
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=2.0)
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=1.5)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].parts['Part-1'].deleteMesh()
+mdb.models['Model-1'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=1.0)
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-1', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.Set(name='fix_x', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #2000000 #80000000 #7fff #0:9 #3fff0 ]', ), ))
+mdb.models['Model-1'].rootAssembly.Set(name='fix_y', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #2000000 #80000000 #7fff #0:9 #3fff0 ]', ), ))
+mdb.models['Model-1'].rootAssembly.Set(name='force', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #11000000 ]', ), ))
+# Save by 46924 on 2025_03_25-14.02.45; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
+    description='', echoPrint=OFF, explicitPrecision=SINGLE, 
+    getMemoryFromAnalysis=True, historyPrint=OFF, memory=90, memoryUnits=
+    PERCENTAGE, model='Model-1', modelPrint=OFF, multiprocessingMode=DEFAULT, 
+    name='Myexaminpfile', nodalOutputPrecision=SINGLE, numCpus=1, numDomains=1, 
+    numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, 
+    scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.models['Model-1'].parts['Part-1'].deleteMesh(regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].setMeshControls(elemShape=QUAD, regions=
+    mdb.models['Model-1'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-1'].parts['Part-1'].generateMesh()
+mdb.models['Model-1'].rootAssembly.regenerate()
+mdb.models['Model-1'].rootAssembly.Set(name='fix_x', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #2000000 #80000000 #7fff #0:9 #3fff00 ]', ), ))
+mdb.models['Model-1'].rootAssembly.Set(name='fix_y', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #2000000 #80000000 #7fff #0:9 #3fff00 ]', ), ))
+mdb.models['Model-1'].rootAssembly.Set(name='force', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #1000000 ]', ), ))
+mdb.models['Model-1'].rootAssembly.Set(name='force', nodes=
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #1000000 #0:10 #200 ]', ), ))
+# Save by 46924 on 2025_03_25-14.31.49; build 2024 2023_09_21-13.55.25 RELr426 190762
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.Model(name='Model-2', objectToCopy=mdb.models['Model-1'])
+mdb.models['Model-2'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-2'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-2'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[2], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[3], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[4], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[5], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[6], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[8], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[10], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[12], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[13], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[14], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[18], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[19], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[20], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[21], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[22]))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(0.0, 0.0), point2=(5.0, 
+    15.0))
+mdb.models['Model-2'].sketches['__edit__'].rectangle(point1=(0.0, 0.0), point2=
+    (200.0, 200.0))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(entity=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[15], point1=(5.0, 15.0)
+    , point2=(33.75, 67.5))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[20], ))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(5.0, 15.0), point2=(
+    13.6181800842751, 40.8545402530581))
+mdb.models['Model-2'].sketches['__edit__'].ParallelConstraint(addUndoState=
+    False, entity1=mdb.models['Model-2'].sketches['__edit__'].geometry[15], 
+    entity2=mdb.models['Model-2'].sketches['__edit__'].geometry[21])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(13.6181800842751, 
+    40.8545402530581), point2=(53.75, 50.0))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(53.75, 50.0), point2=(
+    77.5, 68.75))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(77.5, 68.75), point2=(
+    155.0, 65.0))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(155.0, 65.0), point2=(
+    181.25, 38.75))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(181.25, 38.75), point2=
+    (200.0, 37.5))
+mdb.models['Model-2'].sketches['__edit__'].CoincidentConstraint(addUndoState=
+    False, entity1=mdb.models['Model-2'].sketches['__edit__'].vertices[31], 
+    entity2=mdb.models['Model-2'].sketches['__edit__'].geometry[18])
+mdb.models['Model-2'].sketches['__edit__'].Spline(points=((10.0, 0.0), (8.75, 
+    7.5), (11.25, 16.25), (15.0, 28.75), (21.25, 35.0), (41.25, 41.25), (51.25, 
+    45.0), (57.5, 47.5), (67.5, 53.75), (72.5, 57.5), (76.25, 61.25), (92.5, 
+    63.75), (118.75, 62.5), (138.75, 61.25), (153.75, 58.75), (158.75, 55.0), (
+    165.0, 48.75), (172.5, 41.25), (176.25, 36.25), (180.0, 35.0), (188.75, 
+    33.75), (197.5, 32.5), (212.5, 15.0), (213.75, 3.75)))
+mdb.models['Model-2'].sketches['__edit__'].CoincidentConstraint(addUndoState=
+    False, entity1=mdb.models['Model-2'].sketches['__edit__'].vertices[32], 
+    entity2=mdb.models['Model-2'].sketches['__edit__'].geometry[19])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(10.0, 0.0), point2=(
+    213.75, 3.75))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[28], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[18], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[26], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[25], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[24], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[23], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[22], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[21], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[15], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[16], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[19], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[27], ))
+mdb.models['Model-2'].sketches['__edit__'].imageOptions.setValues(imageName=
+    'aa111', showImage=True)
+mdb.models['Model-2'].sketches['__edit__'].undo()
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[17], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[27], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[72]))
+mdb.models['Model-2'].sketches['__edit__'].Spline(points=((43.75, 6.25), (20.0, 
+    15.0), (8.75, 27.5), (2.5, 40.0), (18.75, 50.0), (36.25, 51.25), (63.75, 
+    62.5), (83.75, 63.75), (98.75, 52.5), (100.0, 41.25), (127.5, 30.0), (
+    135.0, 37.5), (136.25, 15.0), (136.25, 7.5), (125.0, 12.5), (110.0, 8.75), 
+    (86.25, 7.5), (65.0, 6.25), (63.75, 6.25), (62.5, 3.75), (62.5, 1.25), (
+    62.5, -2.5), (55.0, -1.25), (48.75, 1.25), (45.0, 5.0), (43.75, 6.25)))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(2.5, 40.0), point2=(
+    2.5, 21.25))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[30])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(2.5, 21.25), point2=(
+    16.25, 11.25))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[31], ))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[30], ))
+mdb.models['Model-2'].sketches['__edit__'].CircleByCenterPerimeter(center=(
+    33.75, 32.5), point1=(37.5, 28.75))
+mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-2'].sketches['__edit__'])
+del mdb.models['Model-2'].sketches['__edit__']
+mdb.models['Model-2'].parts['Part-1'].regenerate()
+mdb.models['Model-2'].rootAssembly.regenerate()
+mdb.models['Model-2'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=2.0)
+mdb.models['Model-2'].parts['Part-1'].generateMesh()
+mdb.models['Model-2'].parts['Part-1'].deleteMesh(regions=
+    mdb.models['Model-2'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-2'].parts['Part-1'].setMeshControls(elemShape=QUAD, regions=
+    mdb.models['Model-2'].parts['Part-1'].faces.getSequenceFromMask(('[#1 ]', 
+    ), ))
+mdb.models['Model-2'].parts['Part-1'].generateMesh()
+mdb.models['Model-2'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-2'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-2'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(52.5, 41.25), point2=(
+    93.75, 30.0))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(93.75, 30.0), point2=(
+    93.1220121532679, 27.6973778959364))
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[33], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[34])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(93.1220121532679, 
+    27.6973778959364), point2=(52.5, 38.7761084861595))
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[34], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[35])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(52.5, 38.7761084861595)
+    , point2=(52.5, 41.25))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[36])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(53.75, 21.25), point2=(
+    53.75, 15.0))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[37])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(53.75, 15.0), point2=(
+    95.0, 15.0))
+mdb.models['Model-2'].sketches['__edit__'].HorizontalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[38])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[37], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[38])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(95.0, 15.0), point2=(
+    95.0, 20.0))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[39])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[38], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[39])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(95.0, 20.0), point2=(
+    53.75, 21.25))
+mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-2'].sketches['__edit__'])
+del mdb.models['Model-2'].sketches['__edit__']
+mdb.models['Model-2'].parts['Part-1'].regenerate()
+mdb.models['Model-2'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-2'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-2'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[37], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[38], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[39], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[40], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[164], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[167], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[168], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[171], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[172]))
+mdb.models['Model-2'].sketches['__edit__'].delete(objectList=(
+    mdb.models['Model-2'].sketches['__edit__'].geometry[33], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[34], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[35], 
+    mdb.models['Model-2'].sketches['__edit__'].geometry[36], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[155], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[158], 
+    mdb.models['Model-2'].sketches['__edit__'].constraints[161]))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(60.0, 
+    43.75), point2=(66.25, 38.75), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(60.0, 
+    31.25), point2=(66.25, 38.75), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(82.5, 
+    25.0), point2=(83.75, 13.75), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(102.5, 
+    25.0), point2=(105.0, 17.5), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(77.5, 
+    47.5), point2=(80.0, 38.75), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(66.25, 
+    26.25), point2=(67.5, 15.0), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(60.0, 43.75), point2=(
+    60.0, 31.25))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[47])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[41], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[47])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(77.5, 47.5), point2=(
+    77.5, 42.7678571428571))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[48])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[45], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[48])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(77.5, 42.7678571428571)
+    , point2=(80.0, 38.75))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(66.25, 26.25), point2=(
+    66.25, 20.5555555555556))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[50])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[46], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[50])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(66.25, 
+    20.5555555555556), point2=(67.5, 15.0))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(82.5, 25.0), point2=(
+    82.5, 19.3055555555556))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[52])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[43], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[52])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(82.5, 19.3055555555556)
+    , point2=(83.75, 13.75))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(102.5, 25.0), point2=(
+    102.5, 20.8333333333333))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[54])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[44], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[54])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(102.5, 
+    20.8333333333333), point2=(105.0, 17.5))
+mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-2'].sketches['__edit__'])
+del mdb.models['Model-2'].sketches['__edit__']
+mdb.models['Model-2'].parts['Part-1'].regenerate()
+mdb.models['Model-2'].parts['Part-1'].regenerate()
+mdb.models['Model-2'].ConstrainedSketch(name='__edit__', objectToCopy=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].sketch)
+mdb.models['Model-2'].parts['Part-1'].projectReferencesOntoSketch(filter=
+    COPLANAR_EDGES, sketch=mdb.models['Model-2'].sketches['__edit__'], 
+    upToFeature=
+    mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'])
+mdb.models['Model-2'].sketches['__edit__'].ArcByStartEndTangent(point1=(88.75, 
+    35.0), point2=(91.25, 27.5), vector=(1.0, 0.0))
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(88.75, 35.0), point2=(
+    88.75, 30.8333333333333))
+mdb.models['Model-2'].sketches['__edit__'].VerticalConstraint(addUndoState=
+    False, entity=mdb.models['Model-2'].sketches['__edit__'].geometry[57])
+mdb.models['Model-2'].sketches['__edit__'].PerpendicularConstraint(
+    addUndoState=False, entity1=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[56], entity2=
+    mdb.models['Model-2'].sketches['__edit__'].geometry[57])
+mdb.models['Model-2'].sketches['__edit__'].Line(point1=(88.75, 
+    30.8333333333333), point2=(91.25, 27.5))
+mdb.models['Model-2'].parts['Part-1'].features['Shell planar-1'].setValues(
+    sketch=mdb.models['Model-2'].sketches['__edit__'])
+del mdb.models['Model-2'].sketches['__edit__']
+mdb.models['Model-2'].parts['Part-1'].regenerate()
+mdb.models['Model-2'].parts['Part-1'].generateMesh()
+mdb.models['Model-2'].parts['Part-1'].deleteMesh()
+mdb.models['Model-2'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=4.0)
+mdb.models['Model-2'].parts['Part-1'].generateMesh()
+mdb.models['Model-2'].parts['Part-1'].deleteMesh()
+mdb.models['Model-2'].parts['Part-1'].seedPart(deviationFactor=0.1, 
+    minSizeFactor=0.1, size=2.0)
+mdb.models['Model-2'].parts['Part-1'].generateMesh()
+mdb.models['Model-2'].rootAssembly.regenerate()
+mdb.models['Model-2'].rootAssembly.Set(name='fix_x', nodes=
+    mdb.models['Model-2'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #ff800000 #3 #0:10 #7f0 ]', ), ))
+mdb.models['Model-2'].rootAssembly.Set(name='fix_y', nodes=
+    mdb.models['Model-2'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0:3 #ff000000 #3 #0:10 #7f0 ]', ), ))
+mdb.models['Model-2'].rootAssembly.Set(name='force', nodes=
+    mdb.models['Model-2'].rootAssembly.instances['Part-1-1'].nodes.getSequenceFromMask(
+    mask=('[#0 #f0000000 #7ffffff #0 #f0000000 #7 #0:7', 
+    ' #ffff8000 #fff #0 #f ]', ), ))
+mdb.Job(activateLoadBalancing=False, atTime=None, contactPrint=OFF, 
+    description='', echoPrint=OFF, explicitPrecision=SINGLE, 
+    getMemoryFromAnalysis=True, historyPrint=OFF, memory=90, memoryUnits=
+    PERCENTAGE, model='Model-2', modelPrint=OFF, multiprocessingMode=DEFAULT, 
+    name='Demo-2', nodalOutputPrecision=SINGLE, numCpus=1, numDomains=1, 
+    numGPUs=0, numThreadsPerMpiProcess=1, queue=None, resultsFormat=ODB, 
+    scratch='', type=ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs.changeKey(fromName='Demo-2', toName='Demo-2inpfile')
+# Save by 46924 on 2025_04_15-20.19.32; build 2024 2023_09_21-13.55.25 RELr426 190762
