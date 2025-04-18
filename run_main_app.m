@@ -42,11 +42,11 @@ classdef run_main_app < matlab.apps.AppBase
         LocalporosityMax              matlab.ui.control.NumericEditField
         LocalporosityMin              matlab.ui.control.NumericEditField
         Image                         matlab.ui.control.Image
-        UIAxes                        matlab.ui.control.UIAxes
-        UIAxes2                       matlab.ui.control.UIAxes
-        UIAxes4                       matlab.ui.control.UIAxes
-        UIAxes3                       matlab.ui.control.UIAxes
         UIAxes5                       matlab.ui.control.UIAxes
+        UIAxes3                       matlab.ui.control.UIAxes
+        UIAxes4                       matlab.ui.control.UIAxes
+        UIAxes2                       matlab.ui.control.UIAxes
+        UIAxes                        matlab.ui.control.UIAxes
     end
 
     
@@ -304,32 +304,15 @@ classdef run_main_app < matlab.apps.AppBase
             app.GridLayout.ColumnSpacing = 2;
             app.GridLayout.RowSpacing = 2;
 
-            % Create UIAxes5
-            app.UIAxes5 = uiaxes(app.GridLayout);
-            title(app.UIAxes5, 'Overview material distribution')
-            zlabel(app.UIAxes5, 'Z')
-            app.UIAxes5.ClippingStyle = 'rectangle';
-            app.UIAxes5.FontSize = 12;
-            app.UIAxes5.Layout.Row = [24 32];
-            app.UIAxes5.Layout.Column = [12 22];
-
-            % Create UIAxes3
-            app.UIAxes3 = uiaxes(app.GridLayout);
-            title(app.UIAxes3, '\rho')
-            zlabel(app.UIAxes3, 'Z')
-            app.UIAxes3.ClippingStyle = 'rectangle';
-            app.UIAxes3.FontSize = 12;
-            app.UIAxes3.Layout.Row = [13 22];
-            app.UIAxes3.Layout.Column = [21 27];
-
-            % Create UIAxes4
-            app.UIAxes4 = uiaxes(app.GridLayout);
-            title(app.UIAxes4, '\alpha')
-            zlabel(app.UIAxes4, 'Z')
-            app.UIAxes4.ClippingStyle = 'rectangle';
-            app.UIAxes4.FontSize = 12;
-            app.UIAxes4.Layout.Row = [13 22];
-            app.UIAxes4.Layout.Column = [29 35];
+            % Create UIAxes
+            app.UIAxes = uiaxes(app.GridLayout);
+            title(app.UIAxes, 'Convergence history')
+            xlabel(app.UIAxes, 'X')
+            ylabel(app.UIAxes, 'Y')
+            zlabel(app.UIAxes, 'Z')
+            app.UIAxes.FontSize = 12;
+            app.UIAxes.Layout.Row = [1 12];
+            app.UIAxes.Layout.Column = [13 35];
 
             % Create UIAxes2
             app.UIAxes2 = uiaxes(app.GridLayout);
@@ -341,15 +324,32 @@ classdef run_main_app < matlab.apps.AppBase
             app.UIAxes2.Layout.Row = [13 22];
             app.UIAxes2.Layout.Column = [13 19];
 
-            % Create UIAxes
-            app.UIAxes = uiaxes(app.GridLayout);
-            title(app.UIAxes, 'Convergence history')
-            xlabel(app.UIAxes, 'X')
-            ylabel(app.UIAxes, 'Y')
-            zlabel(app.UIAxes, 'Z')
-            app.UIAxes.FontSize = 12;
-            app.UIAxes.Layout.Row = [1 12];
-            app.UIAxes.Layout.Column = [13 35];
+            % Create UIAxes4
+            app.UIAxes4 = uiaxes(app.GridLayout);
+            title(app.UIAxes4, '\alpha')
+            zlabel(app.UIAxes4, 'Z')
+            app.UIAxes4.ClippingStyle = 'rectangle';
+            app.UIAxes4.FontSize = 12;
+            app.UIAxes4.Layout.Row = [13 22];
+            app.UIAxes4.Layout.Column = [29 35];
+
+            % Create UIAxes3
+            app.UIAxes3 = uiaxes(app.GridLayout);
+            title(app.UIAxes3, '\rho')
+            zlabel(app.UIAxes3, 'Z')
+            app.UIAxes3.ClippingStyle = 'rectangle';
+            app.UIAxes3.FontSize = 12;
+            app.UIAxes3.Layout.Row = [13 22];
+            app.UIAxes3.Layout.Column = [21 27];
+
+            % Create UIAxes5
+            app.UIAxes5 = uiaxes(app.GridLayout);
+            title(app.UIAxes5, 'Overview material distribution')
+            zlabel(app.UIAxes5, 'Z')
+            app.UIAxes5.ClippingStyle = 'rectangle';
+            app.UIAxes5.FontSize = 12;
+            app.UIAxes5.Layout.Row = [24 32];
+            app.UIAxes5.Layout.Column = [12 22];
 
             % Create Image
             app.Image = uiimage(app.GridLayout);
@@ -517,7 +517,7 @@ classdef run_main_app < matlab.apps.AppBase
             app.R_minEditField.FontName = 'Arial';
             app.R_minEditField.FontSize = 18;
             app.R_minEditField.Position = [145 252 132 32];
-            app.R_minEditField.Value = 5;
+            app.R_minEditField.Value = 4.5;
 
             % Create VolumeFractionEditFieldLabel
             app.VolumeFractionEditFieldLabel = uilabel(app.Panel);
